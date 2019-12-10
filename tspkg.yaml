@@ -1,0 +1,15 @@
+name: dataset-node-relation
+version: 0.1.1
+
+dps_applet:
+  visualizer: viz.html    # optional
+  dependencies:
+    - name: diagnostic_extractor
+      version: latest
+
+
+extra_deps:
+  pip3: packaging
+
+build: |
+  install process.py *.html *.js style.css ./extern/ ./

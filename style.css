@@ -1,0 +1,66 @@
+html {
+  min-width: 1200px;
+}
+
+svg {
+    overflow: auto;
+}
+
+.node {
+  stroke-width: 1.5px;
+  stroke-opacity: 0.9;
+  cursor: move;
+}
+
+.node-high-light {
+    stroke: red;
+}
+
+.group {
+  stroke: #fff;
+  stroke-width: 2px;
+  cursor: move;
+  opacity: 0.2;
+}
+
+.link {
+  stroke: #aaa;
+  stroke-width: 2px;
+  stroke-opacity: 0.5;
+  marker-end: url(#end-arrow);
+
+  transition: all 1s;
+  transform-origin: 50% 50%;
+}
+
+.link-high-light,
+.link:hover {
+    cursor: pointer;
+    stroke: red;
+    stroke-opacity: 1;
+    stroke-width: 6px;
+    marker-end: url(#highlight-end-arrow);
+}
+
+.link-high-light.link-source {
+    stroke: green;
+    stroke-width: 4px;
+    marker-end: url(#highlight-source-end-arrow);
+}
+
+.link-high-light.link-target {
+    stroke-width: 4px;
+    stroke: blue;
+    marker-end: url(#highlight-target-end-arrow);
+}
+
+.label {
+  fill: white;
+  font-size: 18px;
+  text-anchor: middle;
+}
+
+#cal-text {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+}
